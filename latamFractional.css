@@ -396,7 +396,7 @@ button {
 
 .fotoSolucion {
     inline-size: 40%;
-    background-image: url("imagenes/Latam-Fractional_Solucion_IF.jpg");
+    background-image: url("imagenes/Latam-Fractional_Solucion_IF.webp");
 }
 
 .panelRojo {
@@ -952,7 +952,7 @@ button {
 .fotoContacto {
     inline-size: 50%;
     min-block-size: 400px;
-    background-image: url("imagenes/Latam-Fractional_Integrador.jpg");
+    background-image: url("imagenes/Latam-Fractional_Integrador.webp");
 }
 
 /* B9 · Pie de página */
