@@ -1,0 +1,126 @@
+@font-face {
+    font-family: "Plus Jakarta Sans";
+    src: url("./fuentes/plus-jakarta-sans-normal-400-800.woff2") format("woff2");
+    font-weight: 400 800;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url("./fuentes/poppins-normal-800.woff2") format("woff2");
+    font-weight: 800;
+    font-display: swap;
+}
+
+:root {
+    color: #222;
+    background: #f5eee8;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    --rojo: #b61b14;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    min-height: 100vh;
+    min-height: 100svh;
+    margin: 0;
+    padding: clamp(16px, 5vw, 64px);
+    place-items: center;
+}
+
+.portada {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: min(100%, 1080px);
+    overflow: hidden;
+    border: 1px solid #e5d8cf;
+    border-radius: 24px;
+    background: #fffcf9;
+    box-shadow: 0 20px 70px #45271b14;
+}
+
+.contenido {
+    padding: clamp(28px, 5vw, 64px);
+}
+
+.marca {
+    display: block;
+    width: min(100%, 236px);
+    height: auto;
+}
+
+h1 {
+    margin: clamp(44px, 7vw, 92px) 0 clamp(24px, 4vw, 40px);
+    font: 800 clamp(2.5rem, 5.4vw, 4.625rem)/1.04 Poppins, sans-serif;
+    letter-spacing: -0.055em;
+}
+
+nav {
+    display: grid;
+    gap: 12px;
+}
+
+.version {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    min-height: 58px;
+    padding: 14px 18px;
+    border: 1px solid #dfd2c9;
+    border-radius: 10px;
+    background: #fff;
+    color: inherit;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.version span {
+    color: var(--rojo);
+    font-size: 1.35rem;
+    line-height: 1;
+}
+
+.version:hover {
+    border-color: var(--rojo);
+    background: #fff1ec;
+}
+
+.version:focus-visible {
+    outline: 2px solid var(--rojo);
+    outline-offset: 3px;
+}
+
+.visual {
+    display: grid;
+    min-width: 0;
+    min-height: 100%;
+    padding: clamp(20px, 3vw, 42px);
+    place-items: center;
+    background: #272222;
+}
+
+.visual img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-height: 440px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+@media (max-width: 700px) {
+    .portada {
+        grid-template-columns: 1fr;
+        max-width: 490px;
+    }
+
+    .visual img {
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+}
