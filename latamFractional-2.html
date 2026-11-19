@@ -6,7 +6,7 @@
     <title>Latam Fractional</title>
     <link rel="icon" href="imagenes/Favicon-LF-150x150.png">
     <link rel="stylesheet" href="latamFractional-2.css">
-    <script src="latamFractional-2.js" defer></script>
+    <link rel="stylesheet" href="formulario-empresas.css">\n    <script src="latamFractional-2.js" defer></script>\n    <script src="formulario-empresas.js" defer></script>
 </head>
 <body id="inicio">
     <header class="ctnHeader">
@@ -287,7 +287,29 @@
                     </div>
                     <p>Si estás listo para recuperar tu tiempo y escalar con orden, completa este breve formulario y agenda tu llamada inicial.</p>
                     <div class="ctnFormulario" id="formulario-empresas">
-                        <!-- Pega aquí el código de tu formulario. -->
+                        <div class="formularioEmpresas" role="group" aria-labelledby="tituloContacto">
+                            <div class="campoEmpresa">
+                                <input id="empresa-nombre" type="text" autocomplete="off" placeholder=" ">
+                                <label for="empresa-nombre">Nombre y apellido</label>
+                            </div>
+                            <div class="campoEmpresa">
+                                <input id="empresa-organizacion" type="text" autocomplete="off" placeholder=" ">
+                                <label for="empresa-organizacion">Empresa / Industria</label>
+                            </div>
+                            <div class="campoEmpresa">
+                                <input id="empresa-telefono" type="tel" autocomplete="off" placeholder=" ">
+                                <label for="empresa-telefono">Teléfono</label>
+                            </div>
+                            <div class="campoEmpresa">
+                                <input id="empresa-correo" type="email" autocomplete="off" placeholder=" ">
+                                <label for="empresa-correo">Correo electrónico</label>
+                            </div>
+                            <div class="campoEmpresa">
+                                <input id="empresa-disponibilidad" type="text" autocomplete="off" placeholder=" ">
+                                <label for="empresa-disponibilidad">Disponibilidad para llamada inicial</label>
+                            </div>
+                            <button class="botonEnviarEmpresa" type="button" disabled>Enviar</button>
+                        </div>
                     </div>
                 </div>
                 <div class="fotoSeccion fotoContacto" data-entrada="derecha" aria-hidden="true"></div>
