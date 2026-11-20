@@ -56,7 +56,12 @@ function iniciarCarrusel(carrusel) {
     const puntosCarrusel = carrusel.querySelector(".puntosCarrusel");
     const flechaAnterior = controles.querySelector('[data-paso="-1"]');
     const flechaSiguiente = controles.querySelector('[data-paso="1"]');
-    const etiquetaPunto = carrusel.dataset.carrusel === "fase" ? "Mostrar fase" : "Mostrar desde el perfil";
+    const etiquetas = {
+        fase: "Mostrar fase",
+        perfil: "Mostrar desde el perfil",
+        testimonio: "Mostrar testimonio"
+    };
+    const etiquetaPunto = etiquetas[carrusel.dataset.carrusel];
 
     let posiciones = [0];
     let puntoActivo = 0;

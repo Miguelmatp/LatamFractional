@@ -15,6 +15,13 @@
 
 @font-face {
     font-family: Poppins;
+    src: url("fuentes/poppins-normal-400.woff2") format("woff2");
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: Poppins;
     src: url("fuentes/poppins-normal-600.woff2") format("woff2");
     font-weight: 600;
     font-display: swap;
@@ -53,6 +60,8 @@
     --tam-texto: 1.125rem;
     --tam-menu: 1rem;
     --tam-legal: .8125rem;
+    --tam-titulo-banner: clamp(1.125rem, 8.55cqi, 3.75rem);
+    --tam-testimonio: .9375rem;
     --interlineado: 1.285;
     --rojo: #e40c04;
     --coral: #ff4830;
@@ -221,7 +230,7 @@ button {
 }
 
 .logo {
-    flex: 0 1 clamp(148px, 14.7vw, 220px);
+    flex: 0 1 clamp(148px, 14.7vw, 280px);
     min-inline-size: 148px;
 }
 
@@ -331,8 +340,24 @@ button {
 }
 
 .B1 .columna {
-    gap: 16px;
+    container-type: inline-size;
+    gap: clamp(20px, 2.5vw, 38px);
     padding-inline-end: 50px;
+}
+
+#tituloBanner {
+    font-size: var(--tam-titulo-banner);
+    font-weight: 400;
+    line-height: 1.04;
+}
+
+#tituloBanner em {
+    font-weight: 800;
+}
+
+.remateBanner {
+    display: block;
+    white-space: nowrap;
 }
 
 .fotoBanner {
@@ -561,7 +586,6 @@ button {
 .B5 .bloque {
     align-items: center;
     gap: 28px;
-    max-inline-size: calc(var(--ancho-bloque) * .76);
 }
 
 .B5 .bloque> :is(h2, p) {
@@ -573,7 +597,6 @@ button {
     align-items: flex-start;
     gap: clamp(28px, 5vw, 70px);
     inline-size: 100%;
-    max-inline-size: calc(var(--ancho-bloque) * .735);
     padding-block-start: 36px;
 }
 
@@ -934,6 +957,80 @@ button {
     }
 }
 
+/* Testimonios */
+.BTestimonios .bloque {
+    max-inline-size: 1420px;
+    gap: 6px;
+}
+
+.testimonios {
+    --espacio-testimonios: clamp(20px, 3.75vw, 60px);
+    --ancho-testimonio: calc((100% - 2 * var(--espacio-testimonios)) / 3);
+    display: flex;
+    align-items: stretch;
+    gap: var(--espacio-testimonios);
+    padding: 14px;
+    overflow-y: hidden;
+}
+
+.testimonio {
+    display: flex;
+    flex: 0 0 var(--ancho-testimonio);
+    flex-direction: column;
+    gap: clamp(24px, 2.5vw, 40px);
+    min-inline-size: 0;
+    padding: clamp(24px, 2.6vw, 40px) clamp(24px, 2.6vw, 40px) clamp(30px, 3.5vw, 54px);
+    border-radius: 30px;
+    background: var(--blanco);
+    box-shadow: 0 1px 12px rgb(0 0 0 / 11%);
+    font-size: var(--tam-testimonio);
+    line-height: 1.46;
+    scroll-snap-align: center;
+}
+
+.cabeceraTestimonio,
+.autorTestimonio {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.cabeceraTestimonio {
+    justify-content: space-between;
+}
+
+.comillasTestimonio {
+    inline-size: 56px;
+}
+
+.estrellasTestimonio {
+    inline-size: 100px;
+}
+
+.citaTestimonio {
+    margin: 0;
+}
+
+.autorTestimonio img {
+    flex: 0 0 54px;
+    inline-size: 54px;
+    block-size: 54px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+    .testimonios {
+        --ancho-testimonio: calc((100% - var(--espacio-testimonios)) / 2);
+    }
+}
+
+@media (max-width: 700px) {
+    .testimonios {
+        --ancho-testimonio: min(100%, 26rem);
+    }
+}
+
 /* B8 · Contacto */
 .B8 .panelRojo {
     inline-size: 50%;
@@ -980,7 +1077,13 @@ button {
 }
 
 .logoFooter {
-    inline-size: 180px;
+    inline-size: clamp(242px, calc(20.25vw - 49px), 340px);
+}
+
+@media (max-width: 1024px) {
+    .logoFooter {
+        inline-size: min(100%, clamp(230px, calc(244px + 7.7vw), 325px));
+    }
 }
 
 .logoEos {
@@ -1303,6 +1406,80 @@ button {
 
     .pistaCarrusel.desplazable:focus-visible {
         outline-offset: -3px;
+    }
+}
+
+.enlacesMenu {
+    display: contents;
+}
+
+@media (min-width: 1271px) {
+    .header {
+        --ancho-logo-cabecera: clamp(218px, 16vw, 286px);
+        padding-inline: 18px;
+    }
+
+    .header .logo {
+        flex: 0 0 var(--ancho-logo-cabecera);
+    }
+
+    .menuPrincipal {
+        display: grid;
+        flex: 1 1 auto;
+        grid-template-columns: minmax(0, 1fr) var(--ancho-logo-cabecera);
+        gap: 12px;
+    }
+
+    .enlacesMenu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 6px clamp(8px, .85vw, 16px);
+        font-size: clamp(.875rem, 1.04vw, var(--tam-menu));
+    }
+
+    .menuPrincipal .boton {
+        justify-self: end;
+    }
+}
+
+@media (max-width: 1270px) {
+    .header .logo {
+        flex-basis: clamp(225px, 38vw, 392px);
+    }
+}
+
+@media (max-width: 700px) {
+    .header .logo {
+        flex-basis: 230px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .B5 .bloque {
+        max-inline-size: max(40rem, calc(100% + 2 * var(--lateral) - 560px));
+    }
+
+    .columnasClientes {
+        inline-size: calc(100% - 30px);
+        max-inline-size: 1120px;
+    }
+
+    .oferta {
+        flex: 0 1 42%;
+        min-inline-size: 0;
+    }
+}
+
+@media (max-width: 1024px) {
+    .B5 {
+        padding-inline: 40px;
+    }
+
+    .B5 .bloque,
+    .columnasClientes {
+        max-inline-size: none;
     }
 }
 
