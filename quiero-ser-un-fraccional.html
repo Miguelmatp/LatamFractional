@@ -45,14 +45,27 @@
                 <div class="panelPostulacion">
                     <form id="formularioPostulacion">
                         <div class="indicadorPostulacion">
-                            <p id="textoProgreso" aria-live="polite">Tu perfil - Paso 1 de 6</p>
-                            <progress value="1" max="6" aria-label="Progreso de la postulación"></progress>
+                            <div class="resumenProgreso">
+                                <span id="nombrePasoPostulacion">Tu perfil</span>
+                                <span id="textoProgreso" aria-live="polite">Paso 1 de 6</span>
+                            </div>
+                            <progress class="soloLectores" value="1" max="6" aria-label="Progreso de la postulación"></progress>
+                            <ol class="listaPasosPostulacion" aria-label="Pasos de la postulación">
+                                <li aria-current="step"><span class="numeroPaso">1</span><span class="nombrePaso">Datos personales</span></li>
+                                <li><span class="numeroPaso">2</span><span class="nombrePaso">Trayectoria</span></li>
+                                <li><span class="numeroPaso">3</span><span class="nombrePaso">Experiencia y resultados</span></li>
+                                <li><span class="numeroPaso">4</span><span class="nombrePaso">Liderazgo fraccional</span></li>
+                                <li><span class="numeroPaso">5</span><span class="nombrePaso">Desarrollo comercial</span></li>
+                                <li><span class="numeroPaso">6</span><span class="nombrePaso">Disponibilidad</span></li>
+                            </ol>
                         </div>
                         <section class="pasoPostulacion" data-paso-postulacion="Tu perfil">
                             <div class="encabezadoPaso">
                                 <h2 tabindex="-1">Comencemos con tus datos</h2>
                                 <p>Queremos conocerte y saber cómo contactarte.</p>
+                                <!-- <p class="duracionPostulacion">Proceso completo: 15–20 minutos</p> -->
                             </div>
+                            <!-- <p class="camposObligatorios"><span class="requeridoPostulacion" aria-hidden="true">*</span> Campos obligatorios</p> -->
                             <div class="campoPostulacion">
                                 <div class="entradaPostulacion">
                                     <label for="postulacion-1">Nombre completo <span class="requeridoPostulacion" aria-hidden="true">*</span></label>
@@ -418,7 +431,7 @@
                             <button type="button" class="boton" data-siguiente>Siguiente</button>
                             <a class="boton" href="https://latamfractional.com/quiero-ser-un-fraccional/" data-envio-oficial hidden>Ir al envío oficial</a>
                         </div>
-                        <p class="notaPostulacion">Vista de prueba. Para enviar tus respuestas y el CV, completa el <a href="https://latamfractional.com/quiero-ser-un-fraccional/">formulario oficial</a>.</p>
+                        <!-- <p class="notaPostulacion">Vista de prueba. Para enviar tus respuestas y el CV, completa el <a href="https://latamfractional.com/quiero-ser-un-fraccional/">formulario oficial</a>.</p> -->
                     </form>
                 </div>
             </div>

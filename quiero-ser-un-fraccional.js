@@ -1,7 +1,10 @@
 const formularioPostulacion = document.querySelector("#formularioPostulacion");
 const pasosPostulacion = Array.from(formularioPostulacion.querySelectorAll("[data-paso-postulacion]"));
 const textoProgreso = formularioPostulacion.querySelector("#textoProgreso");
+const nombrePasoPostulacion = formularioPostulacion.querySelector("#nombrePasoPostulacion");
 const indicadorProgreso = formularioPostulacion.querySelector("progress");
+const listaPasosPostulacion = formularioPostulacion.querySelector(".listaPasosPostulacion");
+const marcasPostulacion = Array.from(listaPasosPostulacion.children);
 const botonAnterior = formularioPostulacion.querySelector("[data-anterior]");
 const botonSiguiente = formularioPostulacion.querySelector("[data-siguiente]");
 const enlaceEnvioOficial = formularioPostulacion.querySelector("[data-envio-oficial]");
@@ -32,8 +35,15 @@ function mostrarPaso(indice) {
     pasoActual = indice;
 
     const esUltimo = indice === pasosPostulacion.length - 1;
-    textoProgreso.textContent = `${paso.dataset.pasoPostulacion} - Paso ${indice + 1} de ${pasosPostulacion.length}`;
+    nombrePasoPostulacion.textContent = paso.dataset.pasoPostulacion;
+    textoProgreso.textContent = `Paso ${indice + 1} de ${pasosPostulacion.length}`;
     indicadorProgreso.value = indice + 1;
+    listaPasosPostulacion.style.setProperty("--avance-pasos", indice / (pasosPostulacion.length - 1));
+    marcasPostulacion.forEach((marca, posicion) => {
+        marca.classList.toggle("pasoCompleto", posicion < indice);
+        if (posicion === indice) marca.setAttribute("aria-current", "step");
+        else marca.removeAttribute("aria-current");
+    });
     botonAnterior.hidden = indice === 0;
     botonSiguiente.hidden = esUltimo;
     enlaceEnvioOficial.hidden = !esUltimo;

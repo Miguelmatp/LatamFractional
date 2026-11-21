@@ -1,31 +1,43 @@
 .paginaPostulacion {
     --laterales-postulacion: clamp(20px, (100% - var(--ancho-bloque)) / 2, 7%);
-    background:
-        url("imagenes/puntos-rojos-postulacion.svg") right top / min(17vw, 285px) auto no-repeat,
-        url("imagenes/isotipo.svg") left 540px / clamp(34px, 6vw, 86px) auto no-repeat,
-        var(--crema);
+    background: var(--crema) url("imagenes/isotipo.svg") left 540px / clamp(34px, 6vw, 86px) auto no-repeat;
 }
 
-.paginaPostulacion .ctnHeader,
-.postulacion {
+.paginaPostulacion .ctnHeader {
     padding-inline: var(--laterales-postulacion);
 }
 
 .postulacion {
+    --ancho-postulacion: 72rem;
+    --padding-postulacion: 2rem;
+    position: relative;
     padding-block: clamp(36px, 4vw, 64px) clamp(50px, 5vw, 80px);
+    padding-inline: var(--padding-postulacion);
     background: transparent;
 }
 
+.postulacion::before {
+    position: absolute;
+    inset-block: 0;
+    inset-inline-end: 0;
+    inline-size: min(285px, calc(max(var(--padding-postulacion), (100% - var(--ancho-postulacion)) / 2) - .75rem));
+    background: url("imagenes/puntos-rojos-postulacion.svg") right top / auto 100% no-repeat;
+    pointer-events: none;
+    content: "";
+}
+
 .postulacion .bloque {
+    position: relative;
+    --separacion-postulacion: clamp(24px, 4vw, 44px);
     inline-size: 100%;
-    max-inline-size: 72rem;
-    flex-direction: row;
-    gap: clamp(32px, 5vw, 80px);
+    max-inline-size: var(--ancho-postulacion);
+    align-items: center;
+    gap: var(--separacion-postulacion);
 }
 
 .introduccionPostulacion,
 .panelPostulacion {
-    flex: 1 1 0;
+    inline-size: min(100%, 58rem);
     min-inline-size: 0;
 }
 
@@ -34,7 +46,7 @@
     padding-block-start: 10px;
 }
 
-.introduccionPostulacion p { max-inline-size: 54ch; }
+.introduccionPostulacion p { max-inline-size: 68ch; }
 
 .introduccionPostulacion h1 {
     font-weight: 700;
@@ -43,33 +55,129 @@
 }
 
 .panelPostulacion {
+    padding: clamp(16px, 4vw, 26px);
+    border-radius: clamp(18px, 3vw, 32px);
+    background: var(--blanco);
+    box-shadow: 0 12px 40px rgb(81 46 28 / 10%);
     font-size: 1rem;
     line-height: 1.45;
+}
+
+@media (min-width: 1025px) {
+    .postulacion .bloque {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .introduccionPostulacion,
+    .panelPostulacion {
+        flex: 0 0 calc((100% - var(--separacion-postulacion)) / 2);
+    }
+
+    .panelPostulacion {
+        padding-inline: clamp(22px, 2.8vw, 40px);
+    }
+
+    .nombrePaso {
+        max-inline-size: 100%;
+        hyphens: auto;
+        overflow-wrap: anywhere;
+    }
 }
 
 .indicadorPostulacion {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    padding-block-end: 20px;
+    gap: 22px;
+    padding-block-end: clamp(22px, 4vw, 20px);
 }
 
-.indicadorPostulacion progress {
-    display: block;
-    inline-size: 100%;
-    block-size: 18px;
-    overflow: hidden;
-    border: 0;
+.resumenProgreso {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.resumenProgreso span,
+.duracionPostulacion {
+    padding: 7px 14px;
     border-radius: 99px;
-    appearance: none;
-    background: #e3dfdf;
-    color: var(--rojo);
+    background: #fff0eb;
+    font-weight: 700;
 }
 
-.indicadorPostulacion progress::-webkit-progress-bar { background: #e3dfdf; }
-.indicadorPostulacion progress::-webkit-progress-value { background: var(--rojo); }
-.indicadorPostulacion progress::-moz-progress-bar { background: var(--rojo); }
+.resumenProgreso #textoProgreso {
+    background: var(--rojo);
+    color: var(--blanco);
+}
 
+.listaPasosPostulacion {
+    --avance-pasos: 0;
+    --alto-numero-paso: clamp(32px, 6vw, 40px);
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.listaPasosPostulacion::before,
+.listaPasosPostulacion::after {
+    position: absolute;
+    inset-block-start: calc(var(--alto-numero-paso) / 2 - 1px);
+    inset-inline-start: calc(100% / 12);
+    inline-size: calc(100% * 5 / 6);
+    block-size: 2px;
+    background: #e8e4e4;
+    content: "";
+}
+
+.listaPasosPostulacion::after {
+    inline-size: calc(100% * 5 / 6 * var(--avance-pasos));
+    background: var(--rojo);
+}
+
+.listaPasosPostulacion li {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding-inline: 3px;
+    color: var(--gris);
+    font-size: var(--tam-legal);
+}
+
+.numeroPaso {
+    display: grid;
+    place-items: center;
+    inline-size: var(--alto-numero-paso);
+    block-size: var(--alto-numero-paso);
+    border-radius: 50%;
+    background: #f0eded;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.listaPasosPostulacion :is([aria-current="step"], .pasoCompleto) .numeroPaso {
+    background: var(--rojo);
+    color: var(--blanco);
+}
+
+.listaPasosPostulacion [aria-current="step"] .nombrePaso {
+    color: var(--rojo);
+    font-weight: 700;
+}
+.listaPasosPostulacion .nombrePaso {
+    line-height: 1;
+    font-size: 12px;
+}
+.listaPasosPostulacion li .nombrePaso:nth-of-type(2){
+    display: none;
+}
 .pasoPostulacion {
     display: flex;
     flex-direction: column;
@@ -84,7 +192,7 @@
 }
 
 .encabezadoPaso {
-    gap: 20px;
+    gap: 10px;
     padding-block-end: 3px;
 }
 
@@ -95,6 +203,22 @@
 }
 
 .encabezadoPaso h2:focus { outline: none; }
+
+.encabezadoPaso h2 {
+    color: var(--rojo);
+    font: 700 clamp(1.5rem, 4vw, 1.5rem)/1.15 var(--fuente-titulos);
+}
+
+.duracionPostulacion {
+    align-self: flex-start;
+    color: var(--rojo);
+    font-size: .875rem;
+}
+
+.camposObligatorios {
+    color: var(--gris);
+    font-size: var(--tam-legal);
+}
 
 .campoPostulacion label,
 .campoPostulacion legend {
@@ -128,7 +252,7 @@
     min-inline-size: 0;
     min-block-size: 60px;
     padding-block: 7px;
-    border: 1px solid transparent;
+    border: 1px solid #ded6d1;
     border-radius: 5px;
     background: var(--blanco);
 }
@@ -264,7 +388,20 @@
     font-weight: 700;
 }
 
+.accionesPostulacion :is([data-siguiente], [data-envio-oficial]) {
+    flex: 1 1 12rem;
+    min-block-size: 48px;
+    text-align: center;
+}
+
+.accionesPostulacion [data-anterior] {
+    border: 1px solid #efd6cb;
+    background: #fff0eb;
+    color: var(--rojo);
+}
+
 .accionesPostulacion .boton:hover { background: #b80a04; }
+.accionesPostulacion [data-anterior]:hover { background: #ffe8df; }
 
 .notaPostulacion {
     padding-block-start: 12px;
@@ -276,13 +413,6 @@
     text-decoration: underline;
 }
 
-@media (max-width: 1024px) {
-    .postulacion .bloque { flex-direction: column; }
-    .introduccionPostulacion,
-    .panelPostulacion { flex: 0 1 auto; }
-    .introduccionPostulacion { padding-block-start: 0; }
-}
-
 @media (max-width: 1270px) {
     .paginaPostulacion { --laterales-postulacion: 7%; }
 }
@@ -290,12 +420,16 @@
 @media (max-width: 700px) {
     .paginaPostulacion {
         --laterales-postulacion: 15px;
-        background-position: right top, -25px 430px;
-        background-size: 22vw auto, 32px auto;
+        background-position: -25px 430px;
+        background-size: 32px auto;
     }
 
     .paginaPostulacion .menuPrincipal .boton { display: inline-flex; }
     .paginaPostulacion .B9 { padding-block-end: 30px; }
+}
+
+@media (max-width: 600px) {
+    .nombrePaso { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {

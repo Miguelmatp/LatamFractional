@@ -580,14 +580,25 @@ button {
 
 /* B5 · Clientes y oferta */
 .B5 {
+    position: relative;
     color: var(--blanco);
     background:
         url("imagenes/isotipo.svg") left center / 7% auto no-repeat,
-        url("imagenes/puntos_2.svg") right center / 19% auto no-repeat,
         var(--gris);
 }
 
+.B5::before {
+    position: absolute;
+    inset-block: 0;
+    inset-inline-end: 0;
+    inline-size: 19%;
+    background: url("imagenes/puntos_2.svg") right top / auto 100% no-repeat;
+    pointer-events: none;
+    content: "";
+}
+
 .B5 .bloque {
+    position: relative;
     align-items: center;
     gap: 28px;
 }
@@ -1280,8 +1291,8 @@ button {
     .botonAgendaFlotante {
         display: inline-flex;
         position: fixed;
-        inset-inline-end: 2rem;
-        inset-block-end: 2rem;
+        inset-inline-end: 1rem;
+        inset-block-end:  1rem;
         z-index: 20;
         box-shadow: 0 6px 18px rgb(0 0 0 / 18%);
         font-size: var(--tam-menu);
@@ -1395,7 +1406,14 @@ button {
         text-align: start;
     }
 
-    .B5,
+    .B5 {
+        background-size: 13% auto;
+    }
+
+    .B5::before {
+        inline-size: 30%;
+    }
+
     .B7 {
         background-size: 13% auto, 30% auto, auto;
     }
