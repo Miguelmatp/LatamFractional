@@ -2,7 +2,7 @@
     --laterales-postulacion: clamp(20px, (100% - var(--ancho-bloque)) / 2, 7%);
     background:
         url("imagenes/puntos-rojos-postulacion.svg") right top / min(17vw, 285px) auto no-repeat,
-        url("imagenes/isotipo.svg") left 450px / clamp(34px, 6vw, 86px) auto no-repeat,
+        url("imagenes/isotipo.svg") left 540px / clamp(34px, 6vw, 86px) auto no-repeat,
         var(--crema);
 }
 
@@ -290,7 +290,7 @@
 @media (max-width: 700px) {
     .paginaPostulacion {
         --laterales-postulacion: 15px;
-        background-position: right top, -23px 345px;
+        background-position: right top, -25px 430px;
         background-size: 22vw auto, 32px auto;
     }
 

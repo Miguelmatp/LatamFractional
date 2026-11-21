@@ -293,7 +293,7 @@ button {
     min-inline-size: 29px;
     flex: 0 0 29px;
     block-size: 3px;
-    background: currentColor;
+    background: var(--coral);
     transition: background-color .2s ease;
 }
 
@@ -301,7 +301,7 @@ button {
 .lineasMenu::after {
     position: absolute;
     inset: 0;
-    background: currentColor;
+    background: var(--coral);
     content: "";
     transition: transform .2s ease;
 }
