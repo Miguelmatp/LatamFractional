@@ -1,0 +1,304 @@
+.paginaPostulacion {
+    --laterales-postulacion: clamp(20px, (100% - var(--ancho-bloque)) / 2, 7%);
+    background:
+        url("imagenes/puntos-rojos-postulacion.svg") right top / min(17vw, 285px) auto no-repeat,
+        url("imagenes/isotipo.svg") left 450px / clamp(34px, 6vw, 86px) auto no-repeat,
+        var(--crema);
+}
+
+.paginaPostulacion .ctnHeader,
+.postulacion {
+    padding-inline: var(--laterales-postulacion);
+}
+
+.postulacion {
+    padding-block: clamp(36px, 4vw, 64px) clamp(50px, 5vw, 80px);
+    background: transparent;
+}
+
+.postulacion .bloque {
+    inline-size: 100%;
+    max-inline-size: 72rem;
+    flex-direction: row;
+    gap: clamp(32px, 5vw, 80px);
+}
+
+.introduccionPostulacion,
+.panelPostulacion {
+    flex: 1 1 0;
+    min-inline-size: 0;
+}
+
+.introduccionPostulacion {
+    gap: 14px;
+    padding-block-start: 10px;
+}
+
+.introduccionPostulacion p { max-inline-size: 54ch; }
+
+.introduccionPostulacion h1 {
+    font-weight: 700;
+    line-height: 1;
+    padding-block-end: 6px;
+}
+
+.panelPostulacion {
+    font-size: 1rem;
+    line-height: 1.45;
+}
+
+.indicadorPostulacion {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-block-end: 20px;
+}
+
+.indicadorPostulacion progress {
+    display: block;
+    inline-size: 100%;
+    block-size: 18px;
+    overflow: hidden;
+    border: 0;
+    border-radius: 99px;
+    appearance: none;
+    background: #e3dfdf;
+    color: var(--rojo);
+}
+
+.indicadorPostulacion progress::-webkit-progress-bar { background: #e3dfdf; }
+.indicadorPostulacion progress::-webkit-progress-value { background: var(--rojo); }
+.indicadorPostulacion progress::-moz-progress-bar { background: var(--rojo); }
+
+.pasoPostulacion {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.encabezadoPaso,
+.campoPostulacion {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.encabezadoPaso {
+    gap: 20px;
+    padding-block-end: 3px;
+}
+
+.encabezadoPaso h2,
+.encabezadoPaso h3 {
+    color: var(--texto);
+    font: 700 var(--tam-nombre)/1.25 var(--fuente-texto);
+}
+
+.encabezadoPaso h2:focus { outline: none; }
+
+.campoPostulacion label,
+.campoPostulacion legend {
+    font-weight: 700;
+}
+
+.requeridoPostulacion {
+    color: var(--rojo);
+    font-weight: 400;
+}
+
+.campoPostulacion :is(input:not([type="checkbox"]), select, textarea) {
+    min-inline-size: 0;
+    inline-size: 100%;
+    min-block-size: 43px;
+    padding: 8px 1.5rem;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    background: var(--blanco);
+    color: var(--texto);
+    font: inherit;
+}
+
+.campoPostulacion :is(input, textarea)::placeholder { color: #717171; }
+.campoPostulacion textarea { min-block-size: 110px; resize: vertical; }
+.campoPostulacion [type="file"] { max-inline-size: 100%; }
+
+.entradaPostulacion {
+    display: flex;
+    flex-direction: column;
+    min-inline-size: 0;
+    min-block-size: 60px;
+    padding-block: 7px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background: var(--blanco);
+}
+
+.entradaPostulacion:focus-within { border-color: var(--rojo); }
+
+.entradaPostulacion > label {
+    z-index: 1;
+    padding-inline: 1.5rem;
+    color: var(--gris);
+    font-weight: 600;
+    transform: scale(.85);
+    transform-origin: 1.5rem top;
+    transition: transform 150ms ease, color 150ms ease;
+}
+
+.entradaPostulacion:focus-within > label { color: var(--rojo); }
+
+.entradaPostulacion:has(:placeholder-shown, select:invalid):not(:focus-within) > label {
+    transform: translateY(11px);
+}
+
+.campoPostulacion .entradaPostulacion > :is(input, select, textarea) {
+    min-block-size: 24px;
+    padding-block: 0;
+    border: 0;
+    background: transparent;
+    outline: none;
+}
+
+.campoPostulacion .entradaPostulacion > textarea {
+    min-block-size: 80px;
+    padding-block-end: 6px;
+}
+
+.entradaPostulacion:not(:focus-within) ::placeholder { opacity: 0; }
+.entradaPostulacion:not(:focus-within) > select:invalid { color: transparent; }
+.entradaPostulacion option { color: var(--texto); }
+
+.campoPostulacion .ayudaPostulacion {
+    color: var(--gris);
+    font-size: var(--tam-legal);
+}
+
+.opcionesPostulacion {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.opcionesPostulacion legend { padding: 0 0 10px; }
+
+.listaOpcionesPostulacion {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr));
+    gap: 8px 10px;
+}
+
+.listaOpcionesPostulacion label {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    min-inline-size: 0;
+    min-block-size: 44px;
+    padding: 8px 14px;
+    border: 1px solid #efd6cb;
+    border-radius: 30px;
+    background: #fff8f4;
+    color: var(--texto);
+    font-weight: 400;
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+    cursor: pointer;
+    transition: background-color 150ms ease, border-color 150ms ease;
+}
+
+.listaOpcionesPostulacion label:has(input:checked) {
+    border-color: #d98c7c;
+    background: #ffe8df;
+}
+
+@media (hover: hover) {
+    .listaOpcionesPostulacion label:hover {
+        border-color: #d98c7c;
+        background: #fff0ea;
+    }
+}
+
+.listaOpcionesPostulacion input[type="checkbox"] {
+    appearance: none;
+    flex-shrink: 0;
+    inline-size: 1rem;
+    block-size: 1rem;
+    margin: 0;
+    border: 1px solid #92665b;
+    border-radius: 50%;
+    background: var(--blanco);
+    cursor: pointer;
+}
+
+.listaOpcionesPostulacion input[type="checkbox"]:checked {
+    border-color: var(--rojo);
+    background: radial-gradient(circle, var(--rojo) 0 42%, var(--blanco) 46%);
+}
+
+@media (forced-colors: active) {
+    .listaOpcionesPostulacion input[type="checkbox"],
+    .listaOpcionesPostulacion input[type="checkbox"]:checked {
+        appearance: auto;
+        border: revert;
+        background: revert;
+    }
+}
+
+.listaOpcionesPostulacion label:has(input:focus-visible) {
+    outline: 2px solid var(--rojo);
+    outline-offset: 2px;
+}
+
+.listaOpcionesPostulacion input:focus-visible { outline: none; }
+
+.accionesPostulacion {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-block-start: 32px;
+}
+
+.accionesPostulacion .boton {
+    border: 0;
+    background: var(--rojo);
+    padding: 10px 30px;
+    font-weight: 700;
+}
+
+.accionesPostulacion .boton:hover { background: #b80a04; }
+
+.notaPostulacion {
+    padding-block-start: 12px;
+    font-size: var(--tam-legal);
+}
+
+.notaPostulacion a {
+    color: var(--rojo);
+    text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+    .postulacion .bloque { flex-direction: column; }
+    .introduccionPostulacion,
+    .panelPostulacion { flex: 0 1 auto; }
+    .introduccionPostulacion { padding-block-start: 0; }
+}
+
+@media (max-width: 1270px) {
+    .paginaPostulacion { --laterales-postulacion: 7%; }
+}
+
+@media (max-width: 700px) {
+    .paginaPostulacion {
+        --laterales-postulacion: 15px;
+        background-position: right top, -23px 345px;
+        background-size: 22vw auto, 32px auto;
+    }
+
+    .paginaPostulacion .menuPrincipal .boton { display: inline-flex; }
+    .paginaPostulacion .B9 { padding-block-end: 30px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .entradaPostulacion > label,
+    .listaOpcionesPostulacion label { transition: none; }
+}

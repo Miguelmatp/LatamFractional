@@ -279,7 +279,9 @@ button {
     align-items: center;
     inline-size: 44px;
     block-size: 44px;
-    flex-shrink: 0;
+    min-inline-size: 44px;
+    flex: 0 0 44px;
+    padding: 0;
     color: var(--gris);
     background: none;
     border: 0;
@@ -288,6 +290,8 @@ button {
 .lineasMenu {
     position: relative;
     inline-size: 29px;
+    min-inline-size: 29px;
+    flex: 0 0 29px;
     block-size: 3px;
     background: currentColor;
     transition: background-color .2s ease;
@@ -1036,6 +1040,10 @@ button {
     inline-size: 50%;
     padding-inline-start: clamp(38px, 13vw, 250px);
     justify-content: center;
+}
+
+.B8 .formularioEmpresas {
+    --espacio-campo: 1.5rem;
 }
 
 .ctnFormulario {

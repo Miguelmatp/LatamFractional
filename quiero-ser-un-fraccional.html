@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quiero ser un Fraccional | LATAM Fractional</title>
+    <link rel="icon" href="imagenes/Favicon-LF-150x150.webp">
+    <link rel="stylesheet" href="latamFractional.css">
+    <link rel="stylesheet" href="quiero-ser-un-fraccional.css">
+    <script src="latamFractional.js" defer></script>
+    <script src="quiero-ser-un-fraccional.js" defer></script>
+</head>
+<body class="paginaPostulacion" id="inicio">
+    <header class="ctnHeader">
+        <div class="header">
+            <a class="logo" href="latamFractional.html#inicio">
+                <img src="imagenes/Logo_LF.png" width="1445" height="164" alt="Latam Fractional · Inicio">
+            </a>
+            <button class="botonMenu" type="button" aria-controls="menuPrincipal" aria-expanded="false" hidden>
+                <span class="soloLectores">Menú de navegación</span>
+                <span class="lineasMenu" aria-hidden="true"></span>
+            </button>
+            <nav class="menuPrincipal" id="menuPrincipal" aria-label="Navegación principal">
+                <div class="enlacesMenu">
+                    <a href="latamFractional.html#que-es-un-fraccional">¿Qué es un Fraccional?</a>
+                    <a href="latamFractional.html#proceso">El Proceso</a>
+                    <a href="latamFractional.html#nosotros">Sobre Nosotros</a>
+                    <a href="latamFractional.html#busco-fraccional">Busco un Fraccional</a>
+                    <a href="quiero-ser-un-fraccional.html" aria-current="page">Quiero ser un fraccional</a>
+                </div>
+                <a class="boton" href="https://calendar.app.google/sYpSnifRS9U9LvbM9" target="_blank" rel="noopener">Agendar llamada</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="ctnBloque postulacion" aria-labelledby="tituloPostulacion">
+            <div class="bloque">
+                <div class="columna introduccionPostulacion">
+                    <h1 id="tituloPostulacion">Quiero ser un Fraccional</h1>
+                    <p>¿Eres un profesional con experiencia en dirección operativa y quieres expandir tu impacto?<br><strong class="marca">LATAM Fractional</strong> te conecta con empresas que necesitan tu talento.</p>
+                    <p>Únete a nuestra red de integradores fraccionales y accede a metodología, clientes y acompañamiento continuo.</p>
+                    <p>Completa este formulario para que podamos conocer mejor tu experiencia, trayectoria y áreas de especialización. <strong class="marca">El proceso toma aproximadamente entre 15 y 20 minutos</strong>, por lo que te recomendamos contar con ese tiempo antes de comenzar.</p>
+                </div>
+                <div class="panelPostulacion">
+                    <form id="formularioPostulacion">
+                        <div class="indicadorPostulacion">
+                            <p id="textoProgreso" aria-live="polite">Tu perfil - Paso 1 de 6</p>
+                            <progress value="1" max="6" aria-label="Progreso de la postulación"></progress>
+                        </div>
+                        <section class="pasoPostulacion" data-paso-postulacion="Tu perfil">
+                            <div class="encabezadoPaso">
+                                <h2 tabindex="-1">Comencemos con tus datos</h2>
+                                <p>Queremos conocerte y saber cómo contactarte.</p>
+                            </div>
+                            <div class="campoPostulacion">
+                                <div class="entradaPostulacion">
+                                    <label for="postulacion-1">Nombre completo <span class="requeridoPostulacion" aria-hidden="true">*</span></label>
+                                    <input placeholder=" " type="text" id="postulacion-1" name="postulacion-1" required autocomplete="name">
+                                </div>
+                            </div>
+                            <div class="campoPostulacion">
+                                <div class="entradaPostulacion">
+                                    <label for="postulacion-2">Correo electrónico <span class="requeridoPostulacion" aria-hidden="true">*</span></label>
+                                    <input type="email" id="postulacion-2" name="postulacion-2" required autocomplete="email" placeholder="nombre@correo.com">
+                                </div>
+                            </div>
+                            <div class="campoPostulacion">
+                                <div class="entradaPostulacion">
+                                    <label for="postulacion-6">Celular / WhatsApp <span class="requeridoPostulacion" aria-hidden="true">*</span></label>
+                                    <input type="tel" id="postulacion-6" name="postulacion-6" required autocomplete="tel" placeholder="+51 999 999 999">
+                                </div>
+                            </div>
+                            <div class="campoPostulacion">
+                                <div class="entradaPostulacion">
+                                    <label for="postulacion-7">Ciudad y país <span class="requeridoPostulacion" aria-hidden="true">*</span></label>
+                                    <input type="text" id="postulacion-7" name="postulacion-7" required autocomplete="address-level2" placeholder="Ej. Lima, Perú">
+                                </div>
+                            </div>
+                            <div class="campoPostulacion">
+                                <div class="entradaPostulacion">
+                                    <label for="postulacion-4">Perfil de LinkedIn <span class="requeridoPostulacion" aria-hidden="true">*</span></label>
+                                    <input placeholder=" " type="url" id="postulacion-4" name="postulacion-4" aria-describedby="postulacion-4-ayuda" required>
+                                </div>
+                                <p class="ayudaPostulacion" id="postulacion-4-ayuda">Comparte tu perfil profesional de LinkedIn para conocer mejor tu trayectoria.</p>
+                            </div>
+                        </section>
+                        <section class="pasoPostulacion" data-paso-postulacion="Trayectoria ejecutiva" hidden>
+                            <div class="encabezadoPaso">
+                                <h2 tabindex="-1">Conozcamos tu trayectoria</h2>
+                                <p>Cuéntanos sobre tu experiencia liderando empresas, equipos y organizaciones.</p>
+                            </div>
+                            <div class="campoPostulacion">
+                                <div class="entradaPostulacion">
+                                    <label for="postulacion-13">¿Cuál ha sido tu principal cargo ejecutivo? <span class="requeridoPostulacion" aria-hidden="true">*</span></label>
+                                    <input placeholder=" " type="text" id="postulacion-13" name="postulacion-13" required>
+                                </div>
+                            </div>
+                            <div class="campoPostulacion">
+                                <div class="entradaPostulacion">
+                                    <label for="postulacion-14">¿Cuántos años de experiencia ejecutiva tienes? <span class="requeridoPostulacion" aria-hidden="true">*</span></label>
+                                    <select id="postulacion-14" name="postulacion-14" required>
+                                        <option value="" disabled selected>--- Seleccionar opción ---</option>
+                                        <option value="Menos de 5 años">Menos de 5 años</option>
+                                        <option value="5–10 años">5–10 años</option>
+                                        <option value="11–15 años">11–15 años</option>
+                                        <option value="16–20 años">16–20 años</option>
+                                        <option value="Más de 20 años">Más de 20 años</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="campoPostulacion">
+                                <div class="entradaPostulacion">
+                                    <label for="postulacion-15">¿Cuál ha sido el mayor tamaño de empresa que has liderado? <span class="requeridoPostulacion" aria-hidden="true">*</span></label>
+                                    <select id="postulacion-15" name="postulacion-15" required>
+                                        <option value="" disabled selected>--- Seleccionar opción ---</option>
+                                        <option value="1–10 colaboradores">1–10 colaboradores</option>
+                                        <option value="11–50 colaboradores">11–50 colaboradores</option>
+                                        <option value="51–200 colaboradores">51–200 colaboradores</option>
+                                        <option value="201–500 colaboradores">201–500 colaboradores</option>
+                                        <option value="Más de 500 colaboradores">Más de 500 colaboradores</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="campoPostulacion">
+                                <div class="entradaPostulacion">
+                                    <label for="postulacion-63">¿En qué rango de ventas anuales se encontraba la empresa de mayor tamaño a la que has acompañado en su gestión y operaciones? <span class="requeridoPostulacion" aria-hidden="true">*</span></label>
+                                    <select id="postulacion-63" name="postulacion-63" required>
+                                        <option value="" disabled selected>--- Seleccionar opción ---</option>
+                                        <option value="Menos de $1,000,000">Menos de $1,000,000</option>
+                                        <option value="De $1,000,001 a $3,000,000">De $1,000,001 a $3,000,000</option>
+                                        <option value="​De $3,000,001 a $10,000,000">​De $3,000,001 a $10,000,000</option>
+                                        <option value="​De $10,000,001 a $25,000,000">​De $10,000,001 a $25,000,000</option>
+                                        <option value="​De $25,000,001 a $50,000,000">​De $25,000,001 a $50,000,000</option>
+                                        <option value="Más de $50,000,000">Más de $50,000,000</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="campoPostulacion">
+                                <div class="entradaPostulacion">
+                                    <label for="postulacion-16">¿Cuál ha sido el mayor tamaño de equipo que has liderado directamente? <span class="requeridoPostulacion" aria-hidden="true">*</span></label>
+                                    <select id="postulacion-16" name="postulacion-16" required>
+                                        <option value="" disabled selected>--- Seleccionar opción ---</option>
+                                        <option value="1–5 personas">1–5 personas</option>
+                                        <option value="6–10 personas">6–10 personas</option>
+                                        <option value="11–25 personas">11–25 personas</option>
+                                        <option value="26–50 personas">26–50 personas</option>
+                                        <option value="Más de 50 personas">Más de 50 personas</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <fieldset class="campoPostulacion opcionesPostulacion" data-opciones-requeridas aria-describedby="postulacion-58-ayuda">
+                                <legend>¿En qué industrias has desarrollado experiencia? <span class="requeridoPostulacion" aria-hidden="true">*</span></legend>
+                                <div class="listaOpcionesPostulacion">
+                                    <label><input type="checkbox" name="postulacion-58[]" id="postulacion-58-1" value="Tecnología / Software"> Tecnología / Software</label>
+                                    <label><input type="checkbox" name="postulacion-58[]" id="postulacion-58-2" value="Servicios profesionales"> Servicios profesionales</label>
+                                    <label><input type="checkbox" name="postulacion-58[]" id="postulacion-58-3" value="Finanzas"> Finanzas</label>
+                                    <label><input type="checkbox" name="postulacion-58[]" id="postulacion-58-4" value="Retail / B2C"> Retail / B2C</label>
+                                    <label><input type="checkbox" name="postulacion-58[]" id="postulacion-58-5" value="Consumo masivo"> Consumo masivo</label>
+                                    <label><input type="checkbox" name="postulacion-58[]" id="postulacion-58-6" value="Manufactura"> Manufactura</label>
+                                    <label><input type="checkbox" name="postulacion-58[]" id="postulacion-58-7" value="Salud"> Salud</label>
+                                    <label><input type="checkbox" name="postulacion-58[]" id="postulacion-58-8" value="Educación"> Educación</label>
+                                    <label><input type="checkbox" name="postulacion-58[]" id="postulacion-58-9" value="Construcción"> Construcción</label>
+                                    <label><input type="checkbox" name="postulacion-58[]" id="postulacion-58-10" value="Inmobiliario"> Inmobiliario</label>
+                                    <label><input type="checkbox" name="postulacion-58[]" id="postulacion-58-11" value="Logística / Transporte"> Logística / Transporte</label>
+                                    <label><input type="checkbox" name="postulacion-58[]" id="postulacion-58-12" value="Marketing / Publicidad"> Marketing / Publicidad</label>
+                                    <label><input type="checkbox" name="postulacion-58[]" id="postulacion-58-13" value="Consultoría"> Consultoría</label>
+                                    <label><input type="checkbox" name="postulacion-58[]" id="postulacion-58-14" value="Energía"> Energía</label>
+                                    <label><input type="checkbox" name="postulacion-58[]" id="postulacion-58-15" value="Agroindustria"> Agroindustria</label>
+                                    <label><input type="checkbox" name="postulacion-58[]" id="postulacion-58-16" value="Minería"> Minería</label>
+                                    <label><input type="checkbox" name="postulacion-58[]" id="postulacion-58-17" value="Otro"> Otro</label>
+                                </div>
+                                <p class="ayudaPostulacion" id="postulacion-58-ayuda">Selecciona todas las industrias en las que tengas experiencia relevante.</p>
+                            </fieldset>
+                        </section>
+                        <section class="pasoPostulacion" data-paso-postulacion="Experiencia y resultados" hidden>
+                            <div class="encabezadoPaso">
+                                <h2 tabindex="-1">Tu experiencia en acción</h2>
+                                <p>Queremos conocer cómo has enfrentado desafíos, liderado situaciones complejas y generado resultados.</p>
+                            </div>
+                            <div class="campoPostulacion">
+                                <div class="entradaPostulacion">
+                                    <label for="postulacion-21">Cuéntanos brevemente sobre tu experiencia ejecutiva <span class="requeridoPostulacion" aria-hidden="true">*</span></label>
+                                    <textarea placeholder=" " id="postulacion-21" name="postulacion-21" aria-describedby="postulacion-21-ayuda" required></textarea>
+                                </div>
+                                <p class="ayudaPostulacion" id="postulacion-21-ayuda">Resume tu trayectoria, principales responsabilidades y áreas en las que has generado mayor impacto. Recomendación: límite de 1,000–1,500 caracteres.</p>
+                            </div>
+                            <div class="campoPostulacion">
+                                <div class="entradaPostulacion">
+                                    <label for="postulacion-22">Cuéntanos sobre un desafío empresarial complejo que hayas resuelto <span class="requeridoPostulacion" aria-hidden="true">*</span></label>
+                                    <textarea placeholder=" " id="postulacion-22" name="postulacion-22" aria-describedby="postulacion-22-ayuda" required></textarea>
+                                </div>
+                                <p class="ayudaPostulacion" id="postulacion-22-ayuda">Describe brevemente la situación, las decisiones que tomaste y el resultado obtenido.</p>
+                            </div>
+                            <div class="campoPostulacion">
+                                <div class="entradaPostulacion">
+                                    <label for="postulacion-23">Cuéntanos sobre una situación en la que tu liderazgo haya marcado la diferencia <span class="requeridoPostulacion" aria-hidden="true">*</span></label>
+                                    <textarea placeholder=" " id="postulacion-23" name="postulacion-23" aria-describedby="postulacion-23-ayuda" required></textarea>
+                                </div>
+                                <p class="ayudaPostulacion" id="postulacion-23-ayuda">Describe la situación, tu rol, las acciones que tomaste y el resultado.</p>
+                            </div>
+                            <div class="campoPostulacion">
+                                <div class="entradaPostulacion">
+                                    <label for="postulacion-24">¿Qué resultados medibles has logrado en tu trayectoria? <span class="requeridoPostulacion" aria-hidden="true">*</span></label>
+                                    <textarea placeholder=" " id="postulacion-24" name="postulacion-24" aria-describedby="postulacion-24-ayuda" required></textarea>
+                                </div>
+                                <p class="ayudaPostulacion" id="postulacion-24-ayuda">Comparte ejemplos concretos cuando sea posible: crecimiento, rentabilidad, reducción de costos, ventas, eficiencia, tamaño de equipos, nuevos clientes u otros indicadores.</p>
+                            </div>
+                        </section>
+                        <section class="pasoPostulacion" data-paso-postulacion="Experiencia como líder Fraccional" hidden>
+                            <div class="encabezadoPaso">
+                                <h2 tabindex="-1">Tu experiencia como líder Fraccional</h2>
+                                <p>Queremos conocer tu experiencia trabajando como líder fraccional, facilitando equipos y generando accountability.</p>
+                            </div>
+                            <div class="campoPostulacion">
+                                <div class="entradaPostulacion">
+                                    <label for="postulacion-27">Cuéntanos sobre tu experiencia como líder Fraccional <span class="requeridoPostulacion" aria-hidden="true">*</span></label>
+                                    <textarea placeholder=" " id="postulacion-27" name="postulacion-27" aria-describedby="postulacion-27-ayuda" required></textarea>
+                                </div>
+                                <p class="ayudaPostulacion" id="postulacion-27-ayuda">Indica desde cuándo trabajas como Fraccional, qué roles has desempeñado y qué tipo de empresas o clientes has atendido.</p>
+                            </div>
+                            <div class="campoPostulacion">
+                                <div class="entradaPostulacion">
+                                    <label for="postulacion-28">¿Con cuántos clientes has trabajado como líder Fraccional? <span class="requeridoPostulacion" aria-hidden="true">*</span></label>
+                                    <select id="postulacion-28" name="postulacion-28" required>
+                                        <option value="" disabled selected>--- Seleccionar opción ---</option>
+                                        <option value="1–3 clientes">1–3 clientes</option>
+                                        <option value="4–10 clientes">4–10 clientes</option>
+                                        <option value="11–20 clientes">11–20 clientes</option>
+                                        <option value="Más de 20 clientes">Más de 20 clientes</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="campoPostulacion">
+                                <div class="entradaPostulacion">
+                                    <label for="postulacion-29">¿Cuál es tu experiencia con EOS? <span class="requeridoPostulacion" aria-hidden="true">*</span></label>
+                                    <textarea placeholder=" " id="postulacion-29" name="postulacion-29" aria-describedby="postulacion-29-ayuda" required></textarea>
+                                </div>
+                                <p class="ayudaPostulacion" id="postulacion-29-ayuda">Describe brevemente tu experiencia utilizando o implementando EOS (Entrepreneurial Operating System), incluyendo tu rol y contexto de aplicación.</p>
+                            </div>
+                            <div class="campoPostulacion">
+                                <div class="entradaPostulacion">
+                                    <label for="postulacion-30">¿Qué tan cómodo/a te sientes facilitando reuniones y gestionando accountability? <span class="requeridoPostulacion" aria-hidden="true">*</span></label>
+                                    <select id="postulacion-30" name="postulacion-30" required>
+                                        <option value="" disabled selected>--- Seleccionar opción ---</option>
+                                        <option value="Muy cómodo/a">Muy cómodo/a</option>
+                                        <option value="Lo suficiente">Lo suficiente</option>
+                                        <option value="Poco cómodo/a">Poco cómodo/a</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="pasoPostulacion" data-paso-postulacion="Liderazgo y desarrollo comercial" hidden>
+                            <div class="encabezadoPaso">
+                                <h2 tabindex="-1">Liderazgo y desarrollo comercial</h2>
+                                <p>Conoce cómo lideras, gestionas situaciones difíciles y desarrollas oportunidades de negocio.</p>
+                            </div>
+                            <div class="encabezadoPaso">
+                                <h3>Liderazgo</h3>
+                            </div>
+                            <fieldset class="campoPostulacion opcionesPostulacion" data-opciones-requeridas data-maximo="5" aria-describedby="postulacion-59-ayuda">
+                                <legend>¿Cuáles son tus principales fortalezas de liderazgo? <span class="requeridoPostulacion" aria-hidden="true">*</span></legend>
+                                <div class="listaOpcionesPostulacion">
+                                    <label><input type="checkbox" name="postulacion-59[]" id="postulacion-59-1" value="Visión estratégica"> Visión estratégica</label>
+                                    <label><input type="checkbox" name="postulacion-59[]" id="postulacion-59-2" value="Toma de decisiones"> Toma de decisiones</label>
+                                    <label><input type="checkbox" name="postulacion-59[]" id="postulacion-59-3" value="Desarrollo de equipos"> Desarrollo de equipos</label>
+                                    <label><input type="checkbox" name="postulacion-59[]" id="postulacion-59-4" value="Comunicación"> Comunicación</label>
+                                    <label><input type="checkbox" name="postulacion-59[]" id="postulacion-59-5" value="Gestión del cambio"> Gestión del cambio</label>
+                                    <label><input type="checkbox" name="postulacion-59[]" id="postulacion-59-6" value="Resolución de problemas"> Resolución de problemas</label>
+                                    <label><input type="checkbox" name="postulacion-59[]" id="postulacion-59-7" value="Orientación a resultados"> Orientación a resultados</label>
+                                    <label><input type="checkbox" name="postulacion-59[]" id="postulacion-59-8" value="Gestión de conflictos"> Gestión de conflictos</label>
+                                    <label><input type="checkbox" name="postulacion-59[]" id="postulacion-59-9" value="Desarrollo de talento"> Desarrollo de talento</label>
+                                    <label><input type="checkbox" name="postulacion-59[]" id="postulacion-59-10" value="Pensamiento analítico"> Pensamiento analítico</label>
+                                    <label><input type="checkbox" name="postulacion-59[]" id="postulacion-59-11" value="Facilitación"> Facilitación</label>
+                                    <label><input type="checkbox" name="postulacion-59[]" id="postulacion-59-12" value="Otro"> Otro</label>
+                                </div>
+                                <p class="ayudaPostulacion" id="postulacion-59-ayuda">Selecciona hasta 5 fortalezas.</p>
+                            </fieldset>
+                            <div class="campoPostulacion">
+                                <div class="entradaPostulacion">
+                                    <label for="postulacion-34">¿Qué haces cuando el accountability baja en tu equipo? <span class="requeridoPostulacion" aria-hidden="true">*</span></label>
+                                    <textarea placeholder=" " id="postulacion-34" name="postulacion-34" aria-describedby="postulacion-34-ayuda" required></textarea>
+                                </div>
+                                <p class="ayudaPostulacion" id="postulacion-34-ayuda">Cuéntanos cómo identificas el problema, cómo abordas la situación y qué acciones tomas para generar compromiso y seguimiento.</p>
+                            </div>
+                            <div class="campoPostulacion">
+                                <div class="entradaPostulacion">
+                                    <label for="postulacion-35">¿Cómo abordas las conversaciones difíciles como líder? <span class="requeridoPostulacion" aria-hidden="true">*</span></label>
+                                    <textarea placeholder=" " id="postulacion-35" name="postulacion-35" aria-describedby="postulacion-35-ayuda" required></textarea>
+                                </div>
+                                <p class="ayudaPostulacion" id="postulacion-35-ayuda">Describe brevemente tu enfoque cuando necesitas abordar bajo desempeño, conflictos, desacuerdos o decisiones difíciles.</p>
+                            </div>
+                            <div class="encabezadoPaso">
+                                <h3>Desarrollo comercial</h3>
+                            </div>
+                            <div class="campoPostulacion">
+                                <div class="entradaPostulacion">
+                                    <label for="postulacion-38">¿Qué tan cómodo/a te sientes generando nuevos clientes? <span class="requeridoPostulacion" aria-hidden="true">*</span></label>
+                                    <select id="postulacion-38" name="postulacion-38" required>
+                                        <option value="" disabled selected>--- Seleccionar opción ---</option>
+                                        <option value="Muy cómodo/a">Muy cómodo/a</option>
+                                        <option value="Lo suficiente">Lo suficiente</option>
+                                        <option value="Poco cómodo/a">Poco cómodo/a</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="campoPostulacion">
+                                <div class="entradaPostulacion">
+                                    <label for="postulacion-62">Si has realizado actividades comerciales, ¿de qué tipo han sido? <span class="requeridoPostulacion" aria-hidden="true">*</span></label>
+                                    <textarea placeholder=" " id="postulacion-62" name="postulacion-62" required></textarea>
+                                </div>
+                            </div>
+                            <div class="campoPostulacion">
+                                <div class="entradaPostulacion">
+                                    <label for="postulacion-40">¿Cuáles clientes has generado directamente en los últimos 3 años? <span class="requeridoPostulacion" aria-hidden="true">*</span></label>
+                                    <textarea placeholder=" " id="postulacion-40" name="postulacion-40" aria-describedby="postulacion-40-ayuda" required></textarea>
+                                </div>
+                                <p class="ayudaPostulacion" id="postulacion-40-ayuda">Puedes mencionar los nombres de las empresas, sectores o tipo de cliente, según lo que puedas compartir confidencialmente.</p>
+                            </div>
+                        </section>
+                        <section class="pasoPostulacion" data-paso-postulacion="Disponibilidad y motivación" hidden>
+                            <div class="encabezadoPaso">
+                                <h2 tabindex="-1">Disponibilidad y motivación</h2>
+                                <p>¡Ya casi terminamos! En esta última etapa queremos conocer tu disponibilidad, motivaciones y qué podrías aportar a nuestra red.</p>
+                            </div>
+                            <div class="campoPostulacion">
+                                <div class="entradaPostulacion">
+                                    <label for="postulacion-45">¿Cuál es tu nivel de inglés? <span class="requeridoPostulacion" aria-hidden="true">*</span></label>
+                                    <select id="postulacion-45" name="postulacion-45" required>
+                                        <option value="" disabled selected>--- Seleccionar opción ---</option>
+                                        <option value="Básico">Básico</option>
+                                        <option value="Intermedio">Intermedio</option>
+                                        <option value="Avanzado">Avanzado</option>
+                                        <option value="Fluido / Bilingüe">Fluido / Bilingüe</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <fieldset class="campoPostulacion opcionesPostulacion" data-opciones-requeridas aria-describedby="postulacion-61-ayuda">
+                                <legend>¿Qué mercados de Latinoamérica podrías atender? <span class="requeridoPostulacion" aria-hidden="true">*</span></legend>
+                                <div class="listaOpcionesPostulacion">
+                                    <label><input type="checkbox" name="postulacion-61[]" id="postulacion-61-1" value="Perú"> Perú</label>
+                                    <label><input type="checkbox" name="postulacion-61[]" id="postulacion-61-2" value="Chile"> Chile</label>
+                                    <label><input type="checkbox" name="postulacion-61[]" id="postulacion-61-3" value="Colombia"> Colombia</label>
+                                    <label><input type="checkbox" name="postulacion-61[]" id="postulacion-61-4" value="México"> México</label>
+                                    <label><input type="checkbox" name="postulacion-61[]" id="postulacion-61-5" value="Argentina"> Argentina</label>
+                                    <label><input type="checkbox" name="postulacion-61[]" id="postulacion-61-6" value="Ecuador"> Ecuador</label>
+                                    <label><input type="checkbox" name="postulacion-61[]" id="postulacion-61-7" value="Bolivia"> Bolivia</label>
+                                    <label><input type="checkbox" name="postulacion-61[]" id="postulacion-61-8" value="Brasil"> Brasil</label>
+                                    <label><input type="checkbox" name="postulacion-61[]" id="postulacion-61-9" value="Centroamérica"> Centroamérica</label>
+                                    <label><input type="checkbox" name="postulacion-61[]" id="postulacion-61-10" value="Caribe"> Caribe</label>
+                                    <label><input type="checkbox" name="postulacion-61[]" id="postulacion-61-11" value="Otros mercados de Latinoamérica"> Otros mercados de Latinoamérica</label>
+                                </div>
+                                <p class="ayudaPostulacion" id="postulacion-61-ayuda">Selecciona todos los mercados en los que tengas capacidad o experiencia para atender clientes.</p>
+                            </fieldset>
+                            <fieldset class="campoPostulacion opcionesPostulacion" data-opciones-requeridas>
+                                <legend>¿Cuál es tu disponibilidad para viajar? <span class="requeridoPostulacion" aria-hidden="true">*</span></legend>
+                                <div class="listaOpcionesPostulacion">
+                                    <label><input type="checkbox" name="postulacion-47[]" id="postulacion-47-1" value="No tengo disponibilidad para viajar"> No tengo disponibilidad para viajar</label>
+                                    <label><input type="checkbox" name="postulacion-47[]" id="postulacion-47-2" value="Viajes nacionales ocasionales"> Viajes nacionales ocasionales</label>
+                                    <label><input type="checkbox" name="postulacion-47[]" id="postulacion-47-3" value="Viajes nacionales frecuentes"> Viajes nacionales frecuentes</label>
+                                    <label><input type="checkbox" name="postulacion-47[]" id="postulacion-47-4" value="Viajes internacionales ocasionales"> Viajes internacionales ocasionales</label>
+                                    <label><input type="checkbox" name="postulacion-47[]" id="postulacion-47-5" value="Viajes internacionales frecuentes"> Viajes internacionales frecuentes</label>
+                                </div>
+                            </fieldset>
+                            <div class="campoPostulacion">
+                                <div class="entradaPostulacion">
+                                    <label for="postulacion-48">¿Cuántas horas tienes disponibles para trabajar como Fraccional a la semana? <span class="requeridoPostulacion" aria-hidden="true">*</span></label>
+                                    <select id="postulacion-48" name="postulacion-48" required>
+                                        <option value="" disabled selected>--- Seleccionar opción ---</option>
+                                        <option value="Menos de 5 horas">Menos de 5 horas</option>
+                                        <option value="5–10 horas">5–10 horas</option>
+                                        <option value="11–20 horas">11–20 horas</option>
+                                        <option value="21–30 horas">21–30 horas</option>
+                                        <option value="Más de 30 horas">Más de 30 horas</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="campoPostulacion">
+                                <label for="postulacion-49">¿Cuándo podrías comenzar? <span class="requeridoPostulacion" aria-hidden="true">*</span></label>
+                                <input type="date" id="postulacion-49" name="postulacion-49" aria-describedby="postulacion-49-ayuda" required>
+                                <p class="ayudaPostulacion" id="postulacion-49-ayuda">Indica la fecha más cercana en la que podrías comenzar a trabajar como Fraccional.</p>
+                            </div>
+                            <div class="campoPostulacion">
+                                <div class="entradaPostulacion">
+                                    <label for="postulacion-50">¿Cuál es tu expectativa de compensación por hora? <span class="requeridoPostulacion" aria-hidden="true">*</span></label>
+                                    <input placeholder=" " type="text" id="postulacion-50" name="postulacion-50" aria-describedby="postulacion-50-ayuda" required>
+                                </div>
+                                <p class="ayudaPostulacion" id="postulacion-50-ayuda">Cuéntanos cuánto esperas recibir por hora de trabajo como líder Fraccional. Preferiblemente, indica el monto en dólares estadounidenses ($), aunque también puedes expresarlo en soles (S/.).</p>
+                            </div>
+                            <div class="encabezadoPaso">
+                                <h3>Motivación</h3>
+                            </div>
+                            <div class="campoPostulacion">
+                                <div class="entradaPostulacion">
+                                    <label for="postulacion-52">¿Qué te motiva a formar parte de LATAM Fractional? <span class="requeridoPostulacion" aria-hidden="true">*</span></label>
+                                    <textarea placeholder=" " id="postulacion-52" name="postulacion-52" aria-describedby="postulacion-52-ayuda" required></textarea>
+                                </div>
+                                <p class="ayudaPostulacion" id="postulacion-52-ayuda">Cuéntanos qué te atrae de nuestra red y del modelo de liderazgo Fraccional.</p>
+                            </div>
+                            <div class="campoPostulacion">
+                                <div class="entradaPostulacion">
+                                    <label for="postulacion-53">¿Qué aportarías a nuestra red de líderes Fraccionales? <span class="requeridoPostulacion" aria-hidden="true">*</span></label>
+                                    <textarea placeholder=" " id="postulacion-53" name="postulacion-53" aria-describedby="postulacion-53-ayuda" required></textarea>
+                                </div>
+                                <p class="ayudaPostulacion" id="postulacion-53-ayuda">Cuéntanos qué experiencia, conocimientos, fortalezas o conexiones aportarías a nuestra red.</p>
+                            </div>
+                            <div class="encabezadoPaso">
+                                <h3>Un último paso</h3>
+                            </div>
+                            <div class="campoPostulacion">
+                                <label for="postulacion-55">Adjunta tu CV actualizado <span class="requeridoPostulacion" aria-hidden="true">*</span></label>
+                                <input type="file" id="postulacion-55" name="postulacion-55" aria-describedby="postulacion-55-ayuda" required accept="application/pdf,.pdf">
+                                <p class="ayudaPostulacion" id="postulacion-55-ayuda">Adjunta tu CV actualizado en formato PDF. Tamaño máximo recomendado: 5 MB.</p>
+                            </div>
+                        </section>
+                        <div class="accionesPostulacion">
+                            <button type="button" class="boton" data-anterior hidden>Atrás</button>
+                            <button type="button" class="boton" data-siguiente>Siguiente</button>
+                            <a class="boton" href="https://latamfractional.com/quiero-ser-un-fraccional/" data-envio-oficial hidden>Ir al envío oficial</a>
+                        </div>
+                        <p class="notaPostulacion">Vista de prueba. Para enviar tus respuestas y el CV, completa el <a href="https://latamfractional.com/quiero-ser-un-fraccional/">formulario oficial</a>.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="ctnBloque B9">
+        <div class="bloque">
+            <div class="columna contactoFooter">
+                <a href="latamFractional.html#inicio"><img class="logoFooter" src="imagenes/Logo_LF.svg" alt="Latam Fractional · Inicio" loading="lazy"></a>
+                <div class="redes">
+                    <a href="https://www.linkedin.com/company/latam-fractional/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="imagenes/icono-linkedin.svg" alt=""></a>
+                    <a href="https://wa.me/51945330278" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="imagenes/icono-whatsapp.svg" alt=""></a>
+                </div>
+                <a class="correo" href="mailto:admin@latamfractional.com">admin@latamfractional.com</a>
+                <p>Copyright© 2026 LATAM Fractional.<br>Todos los derechos reservados.</p>
+            </div>
+            <div class="columna legalFooter">
+                <img class="logoEos" src="imagenes/EOS-Logo.png" width="550" height="303" alt="EOS" loading="lazy">
+                <p>Entrepreneurial Operating System®, EOS®, and their affiliated trademarks are the Intellectual Property of EOS® Worldwide, LLC. GCE Strategic Consulting, LLC is not endorsed by or affiliated with EOS® Worldwide, LLC.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
