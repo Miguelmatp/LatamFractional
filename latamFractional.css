@@ -1063,7 +1063,7 @@ button {
 
 .B8 .botonEnviarEmpresa:hover {
     background-color: var(--coral);
-    color: var(--oscuro);
+    color: white;
 }
 
 .ctnFormulario {
