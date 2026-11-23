@@ -1057,6 +1057,15 @@ button {
     --espacio-campo: 1.5rem;
 }
 
+.B8 .botonEnviarEmpresa {
+    transition: background-color 220ms ease, color 220ms ease;
+}
+
+.B8 .botonEnviarEmpresa:hover {
+    background-color: var(--coral);
+    color: var(--oscuro);
+}
+
 .ctnFormulario {
     inline-size: 100%;
 }
@@ -1540,6 +1549,10 @@ button {
 }
 
 @media (prefers-reduced-motion: reduce) {
+    .B8 .botonEnviarEmpresa {
+        transition: none;
+    }
+
     html,
     .pistaCarrusel {
         scroll-behavior: auto;
