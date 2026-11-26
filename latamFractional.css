@@ -435,13 +435,14 @@ button {
     background-color: var(--rojo);
 }
 
+:is(.B3, .B5, .paginaPostulacion) {
+    --patron-puntos: url("imagenes/puntos_1.webp") right top / 39% auto repeat-y;
+}
+
 .B3 .panelRojo {
     inline-size: 60%;
     padding-inline: clamp(30px, 4.2vw, 60px) clamp(44px, 9.8vw, 140px);
-    background-image: url("imagenes/puntos_1.webp");
-    background-position: right center;
-    background-size: 39% auto;
-    background-repeat: no-repeat;
+    background: var(--patron-puntos) var(--rojo);
 }
 
 .grupoTitulo {
@@ -591,8 +592,9 @@ button {
     position: absolute;
     inset-block: 0;
     inset-inline-end: 0;
-    inline-size: 19%;
-    background: url("imagenes/puntos_2.svg") right top / auto 100% no-repeat;
+    inline-size: 60%;
+    background-color: var(--rojo);
+    mask: var(--patron-puntos);
     pointer-events: none;
     content: "";
 }
@@ -1376,9 +1378,12 @@ button {
         min-block-size: 240px;
     }
 
+    :is(.B3, .B5, .paginaPostulacion) {
+        --patron-puntos: url("imagenes/puntos_1.webp") right top / 75% auto repeat-y;
+    }
+
     .B3 .panelRojo {
         padding-inline: var(--lateral);
-        background-size: 75% auto;
     }
 
     .fases.pistaCarrusel {
@@ -1416,11 +1421,7 @@ button {
     }
 
     .B5 {
-        background-size: 13% auto;
-    }
-
-    .B5::before {
-        inline-size: 30%;
+        background-size: 9% auto;
     }
 
     .B7 {
@@ -1508,6 +1509,10 @@ button {
 }
 
 @media (max-width: 1024px) {
+    .B5::before {
+        inline-size: 100%;
+    }
+
     .B5 {
         padding-inline: 40px;
     }
