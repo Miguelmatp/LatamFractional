@@ -434,6 +434,10 @@
         background-size: 32px auto;
     }
 
+    .paginaPostulacion::before {
+        background: linear-gradient(to left, var(--rojo), transparent 15%);
+    }
+
     .paginaPostulacion .menuPrincipal .boton { display: inline-flex; }
     .paginaPostulacion .B9 { padding-block-end: 30px; }
 }

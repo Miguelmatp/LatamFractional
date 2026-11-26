@@ -435,7 +435,7 @@ button {
     background-color: var(--rojo);
 }
 
-:is(.B3, .B5, .paginaPostulacion) {
+:is(.B3, .B5, .B7, .paginaPostulacion) {
     --patron-puntos: url("imagenes/puntos_1.webp") right top / 39% auto repeat-y;
 }
 
@@ -588,7 +588,8 @@ button {
         var(--gris);
 }
 
-.B5::before {
+.B5::before,
+.B7::before {
     position: absolute;
     inset-block: 0;
     inset-inline-end: 0;
@@ -787,13 +788,14 @@ button {
 
 /* B7 · Equipo */
 .B7 {
+    position: relative;
     background:
         url("imagenes/isotipo.svg") left center / 7% auto no-repeat,
-        url("imagenes/puntos_2.svg") right center / 25% auto no-repeat,
         var(--crema);
 }
 
 .B7 .bloque {
+    position: relative;
     gap: clamp(28px, 4vw, 50px);
     max-inline-size: calc(var(--ancho-bloque) * .925);
     text-align: center;
@@ -1378,7 +1380,7 @@ button {
         min-block-size: 240px;
     }
 
-    :is(.B3, .B5, .paginaPostulacion) {
+    :is(.B3, .B5, .B7, .paginaPostulacion) {
         --patron-puntos: url("imagenes/puntos_1.webp") right top / 75% auto repeat-y;
     }
 
@@ -1425,7 +1427,7 @@ button {
     }
 
     .B7 {
-        background-size: 13% auto, 30% auto, auto;
+        background-size: 13% auto;
     }
 
     .equipo {
@@ -1509,7 +1511,8 @@ button {
 }
 
 @media (max-width: 1024px) {
-    .B5::before {
+    .B5::before,
+    .B7::before {
         inline-size: 100%;
     }
 
