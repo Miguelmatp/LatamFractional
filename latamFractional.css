@@ -436,7 +436,8 @@ button {
 }
 
 :is(.B3, .B5, .B7, .paginaPostulacion) {
-    --patron-puntos: url("imagenes/puntos_1.webp") right top / 39% auto repeat-y;
+    --ancho-patron-puntos: 39%;
+    --patron-puntos: url("imagenes/puntos_1.webp") right top / var(--ancho-patron-puntos) auto repeat-y;
 }
 
 .B3 .panelRojo {
@@ -792,6 +793,11 @@ button {
     background:
         url("imagenes/isotipo.svg") left center / 7% auto no-repeat,
         var(--crema);
+}
+
+.B7::before {
+    /* Recorta las cuatro columnas interiores sin cambiar la escala del patrón. */
+    clip-path: inset(0 0 0 calc(100% - var(--ancho-patron-puntos) * .725));
 }
 
 .B7 .bloque {
@@ -1381,7 +1387,7 @@ button {
     }
 
     :is(.B3, .B5, .B7, .paginaPostulacion) {
-        --patron-puntos: url("imagenes/puntos_1.webp") right top / 75% auto repeat-y;
+        --ancho-patron-puntos: 75%;
     }
 
     .B3 .panelRojo {
@@ -1428,6 +1434,10 @@ button {
 
     .B7 {
         background-size: 13% auto;
+    }
+
+    .B7::before {
+        background: linear-gradient(to left, var(--rojo), transparent min(27%, calc(50% - var(--tam-titulo) * 2.8)));
     }
 
     .equipo {
