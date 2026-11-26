@@ -430,7 +430,7 @@
 @media (max-width: 700px) {
     .paginaPostulacion {
         --laterales-postulacion: 15px;
-        background-position: -25px 430px;
+        background-position: -10px 430px;
         background-size: 32px auto;
     }
 
